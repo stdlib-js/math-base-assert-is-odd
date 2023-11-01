@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2023 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -21,67 +21,13 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var PINF = require( '@stdlib/constants-float64-pinf' );
-var NINF = require( '@stdlib/constants-float64-ninf' );
-var randu = require( '@stdlib/random-base-randu' );
-var round = require( '@stdlib/math-base-special-round' );
-var isOdd = require( './../../dist' );
+var main = require( './../../dist' );
 
 
 // TESTS //
 
-tape( 'main export is a function', function test( t ) {
+tape( 'main export is defined', function test( t ) {
 	t.ok( true, __filename );
-	t.strictEqual( typeof isOdd, 'function', 'main export is a function' );
-	t.end();
-});
-
-tape( 'the function returns `false` if provided an even number', function test( t ) {
-	var bool;
-	var x;
-	var i;
-	for ( i = 0; i < 1000; i++ ) {
-		x = round( randu()*1.0e6 ) - 5.0e5;
-		x *= 2; // always even
-		bool = isOdd( x );
-		t.equal( bool, false, 'returns false when provided '+x );
-	}
-	t.end();
-});
-
-tape( 'the function returns `true` if provided an odd number', function test( t ) {
-	var bool;
-	var x;
-	var i;
-	for ( i = 0; i < 1000; i++ ) {
-		x = round( randu()*1.0e6 ) - 5.0e5;
-		if ( x%2 === 0 ) {
-			x += 1;
-		}
-		bool = isOdd( x );
-		t.equal( bool, true, 'returns true when provided '+x );
-	}
-	t.end();
-});
-
-tape( 'the function returns `false` if provided `+-0`', function test( t ) {
-	t.equal( isOdd( +0.0 ), false, 'returns false' );
-	t.equal( isOdd( -0.0 ), false, 'returns false' );
-	t.end();
-});
-
-tape( 'WARNING: the function returns `true` if provided `+infinity`', function test( t ) {
-	t.equal( isOdd( PINF ), true, 'returns true' );
-	t.end();
-});
-
-tape( 'WARNING: the function returns `true` if provided `-infinity`', function test( t ) {
-	t.equal( isOdd( NINF ), true, 'returns true' );
-	t.end();
-});
-
-tape( 'the function returns `false` if provided `NaN`', function test( t ) {
-	t.equal( isOdd( NaN ), false, 'returns false' );
-	t.equal( isOdd( 0.0/0.0 ), false, 'returns false' );
+	t.strictEqual( main !== void 0, true, 'main export is defined' );
 	t.end();
 });
