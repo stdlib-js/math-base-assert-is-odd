@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/math-base-assert-is-odd",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Test if a finite numeric value is an odd number.",
   "license": "Apache-2.0",
   "author": {
@@ -37,7 +37,7 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/math-base-assert-is-even": "^0.1.0"
+    "@stdlib/math-base-assert-is-even": "^0.2.0"
   },
   "devDependencies": {
     "@stdlib/assert-is-boolean": "^0.1.1",
