@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import isOdd from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-assert-is-odd@esm/index.mjs';
+import isOdd from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-assert-is-odd@v0.2.0-esm/index.mjs';
 ```
 
 #### isOdd( x )
@@ -107,7 +107,7 @@ bool = isOdd( NaN );
 
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
 import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@esm/index.mjs';
-import isOdd from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-assert-is-odd@esm/index.mjs';
+import isOdd from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-assert-is-odd@v0.2.0-esm/index.mjs';
 
 var bool;
 var x;
