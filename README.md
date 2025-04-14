@@ -35,14 +35,32 @@ limitations under the License.
 
 > Test if a finite double-precision floating-point number is an odd number.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-assert-is-odd
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import isOdd from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-assert-is-odd@deno/mod.js';
+var isOdd = require( '@stdlib/math-base-assert-is-odd' );
 ```
 
 #### isOdd( x )
@@ -100,15 +118,19 @@ bool = isOdd( NaN );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@deno/mod.js';
-import isOdd from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-assert-is-odd@deno/mod.js';
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var logEachMap = require( '@stdlib/console-log-each-map' );
+var isOdd = require( '@stdlib/math-base-assert-is-odd' );
 
-var x = discreteUniform( 100, 0, 1000 );
+var opts = {
+    'dtype': 'float64'
+};
+var x = discreteUniform( 100, 0, 1000, opts );
 
-var i;
-for ( i = 0; i < x.length; i++ ) {
-    console.log( '%d is %s', x[ i ], ( isOdd( x[ i ] ) ) ? 'odd' : 'not odd' );
+function isOddWrapper( integer ) {
+    return ( isOdd( integer ) ) ? 'odd' : 'not odd';
 }
+logEachMap( '%d is %s', x, isOddWrapper );
 ```
 
 </section>
@@ -117,7 +139,94 @@ for ( i = 0; i < x.length; i++ ) {
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/math/base/assert/is_odd.h"
+```
+
+#### stdlib_base_is_odd( x )
+
+Tests if a finite double-precision floating-point number is an odd number.
+
+```c
+#include <stdbool.h>
+
+bool out = stdlib_base_is_odd( 1.0 );
+// returns true
+
+out = stdlib_base_is_odd( 4.0 );
+// returns false
+```
+
+The function accepts the following arguments:
+
+-   **x**: `[in] double` input value.
+
+```c
+bool stdlib_base_is_odd( const double x );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/math/base/assert/is_odd.h"
+#include <stdio.h>
+#include <stdbool.h>
+
+int main( void ) {
+    const double x[] = { 5.0, -5.0, 3.14, -3.14, 0.0, 0.0/0.0 };
+
+    bool b;
+    int i;
+    for ( i = 0; i < 6; i++ ) {
+        b = stdlib_base_is_odd( x[ i ] );
+        printf( "Value: %lf. Is Odd? %s.\n", x[ i ], ( b ) ? "True" : "False" );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -142,7 +251,7 @@ for ( i = 0; i < x.length; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -207,7 +316,7 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/assert/is-even]: https://github.com/stdlib-js/math-base-assert-is-even/tree/deno
+[@stdlib/math/base/assert/is-even]: https://github.com/stdlib-js/math-base-assert-is-even
 
 <!-- </related-links> -->
 
