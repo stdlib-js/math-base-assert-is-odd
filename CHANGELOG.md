@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-04-07)
+## Unreleased (2025-04-14)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`ef16301`](https://github.com/stdlib-js/stdlib/commit/ef163012ebdb76aca762baa0a65118bcf6a866e9) - **docs:** replace manual `for` loop in examples [(#6675)](https://github.com/stdlib-js/stdlib/pull/6675) _(by Harsh)_
 -   [`8d4fc66`](https://github.com/stdlib-js/stdlib/commit/8d4fc6616ef38fd4ebd06b4cc09fda4a5b111e7a) - **docs:** clean-up examples _(by Athan Reines)_
 -   [`da89fb7`](https://github.com/stdlib-js/stdlib/commit/da89fb740ff5ac2fb205e6b8cb1852b0f9947982) - **refactor:** update `math/base/assert/is-odd` to follow latest project conventions [(#4670)](https://github.com/stdlib-js/stdlib/pull/4670) _(by Vivek Maurya)_
 -   [`f13ddb2`](https://github.com/stdlib-js/stdlib/commit/f13ddb2eb01e5520b6fa98634bbf9de76793036f) - **style:** use spaces for alignment in C comments _(by Philipp Burckhardt)_
@@ -29,10 +30,11 @@
 
 ### Contributors
 
-A total of 4 people contributed to this release. Thank you to the following contributors:
+A total of 5 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
 -   Gunj Joshi
+-   Harsh
 -   Philipp Burckhardt
 -   Vivek Maurya
 
