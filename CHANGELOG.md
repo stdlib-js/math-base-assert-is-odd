@@ -4,7 +4,17 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-04-15)
+## Unreleased (2025-08-08)
+
+<section class="bug-fixes">
+
+### Bug Fixes
+
+-   [`3eea4f7`](https://github.com/stdlib-js/stdlib/commit/3eea4f78d4cfeae6f9dbf10b0c21175a65e5e07b) - add missing includes
+
+</section>
+
+<!-- /.bug-fixes -->
 
 <section class="commits">
 
@@ -12,6 +22,7 @@
 
 <details>
 
+-   [`3eea4f7`](https://github.com/stdlib-js/stdlib/commit/3eea4f78d4cfeae6f9dbf10b0c21175a65e5e07b) - **fix:** add missing includes _(by Athan Reines)_
 -   [`f7b18f2`](https://github.com/stdlib-js/stdlib/commit/f7b18f2f07eea6ac092fee7bc7c459fe96b4dd2c) - **bench:** update random value generation [(#6687)](https://github.com/stdlib-js/stdlib/pull/6687) _(by Harsh)_
 -   [`ef16301`](https://github.com/stdlib-js/stdlib/commit/ef163012ebdb76aca762baa0a65118bcf6a866e9) - **docs:** replace manual `for` loop in examples [(#6675)](https://github.com/stdlib-js/stdlib/pull/6675) _(by Harsh)_
 -   [`8d4fc66`](https://github.com/stdlib-js/stdlib/commit/8d4fc6616ef38fd4ebd06b4cc09fda4a5b111e7a) - **docs:** clean-up examples _(by Athan Reines)_
